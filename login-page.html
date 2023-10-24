@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  
+</head>
+<body>
+  <h1>Login Seite</h1>
+  <p>Login Username und/oder Password falsch. </p>
+
+  <script>  
+    const Username = new URL(location.href).searchParams.get('Username');
+    const Password = new URL(location.href).searchParams.get('Password');
+
+    if(Username === 'Stephan' && Password === 'Kansy') {
+      const p = document.querySelector('p');
+      p.innerText = "Login Username und Password richtig."
+    };
+  </script>
+</body>
+</html>
